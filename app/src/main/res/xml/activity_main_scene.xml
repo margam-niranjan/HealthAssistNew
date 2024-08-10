@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000"
+        motion:autoTransition="animateToEnd">
+        <KeyFrameSet>
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/backgrountLayout"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:scaleX="10"
+            android:scaleY="10" />
+        <Constraint
+            android:id="@+id/HealthAssistLogoWhite"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="141dp"
+            android:layout_height="142dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:scaleX="0"
+            android:scaleY="0"
+            android:alpha="0" />
+        <Constraint
+            android:id="@+id/HealthAssistLogoBlack"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="141dp"
+            android:layout_height="142dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:scaleX="1"
+            android:scaleY="1" />
+        <Constraint
+            android:id="@+id/HealthAssistTextSmallWhite"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/HealthAssistTextWhite"
+            motion:layout_constraintHorizontal_bias="0.498"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="15dp"
+            android:scaleX="0" />
+        <Constraint
+            android:id="@+id/HealthAssistTextSmallWhite"
+            android:scaleX="0"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/HealthAssistTextWhite"
+            motion:layout_constraintHorizontal_bias="0.498"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="15dp"
+            android:scaleY="0" />
+        <Constraint
+            android:id="@+id/textBlack"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/backgrountLayout"
+            motion:layout_constraintHorizontal_bias="0.501"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="12dp"
+            android:visibility="visible" />
+        <Constraint
+            android:id="@+id/textWhite"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/backgrountLayout"
+            motion:layout_constraintHorizontal_bias="0.501"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="12dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/textSmallWhite"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/textBlack"
+            motion:layout_constraintHorizontal_bias="0.507"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="12dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/textSmallBlack"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/textBlack"
+            motion:layout_constraintHorizontal_bias="0.507"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="12dp"
+            android:visibility="visible" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/backgrountLayout"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:scaleX="0"
+            android:scaleY="0" />
+        <Constraint
+            android:id="@+id/HealthAssistLogoWhite"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="141dp"
+            android:layout_height="142dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:alpha="1"
+            motion:transitionEasing="cubic(1,0,1,0)" />
+        <Constraint
+            android:id="@+id/HealthAssistLogoBlack"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="141dp"
+            android:layout_height="142dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:scaleX="0"
+            android:scaleY="0" />
+        <Constraint
+            android:id="@+id/HealthAssistTextSmallWhite"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/HealthAssistTextWhite"
+            motion:layout_constraintHorizontal_bias="0.498"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="15dp"
+            android:scaleX="1"
+            android:scaleY="1" />
+        <Constraint
+            android:id="@+id/HealthAssistTextSmallWhite"
+            android:scaleX="0"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/HealthAssistTextWhite"
+            motion:layout_constraintHorizontal_bias="0.498"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="15dp"
+            android:scaleY="0" />
+        <Constraint
+            android:id="@+id/textBlack"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/backgrountLayout"
+            motion:layout_constraintHorizontal_bias="0.501"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="12dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/textWhite"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/backgrountLayout"
+            motion:layout_constraintHorizontal_bias="0.501"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="12dp"
+            android:visibility="visible" />
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintHorizontal_bias="0.497"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/textBlack"
+            android:id="@+id/textSmallWhite"
+            android:layout_marginTop="12dp" />
+        <Constraint
+            android:id="@+id/textSmallBlack"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/textBlack"
+            motion:layout_constraintHorizontal_bias="0.502"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="12dp"
+            android:visibility="invisible" />
+    </ConstraintSet>
+</MotionScene>
