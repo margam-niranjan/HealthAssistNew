@@ -5,4 +5,6 @@
     <color name="light">#595959</color>
     <color name="grey">#D9D9D9</color>
     <color name="text_light">#8A8988</color>
+    <color name="light_blue">#338AB7FF</color>
+    <color name="light_green">#33338AB7</color>
 </resources>
