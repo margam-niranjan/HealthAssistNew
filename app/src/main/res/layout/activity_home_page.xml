@@ -7,6 +7,31 @@
     android:layout_height="match_parent"
     tools:context=".HomePage">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:liftOnScrollTargetViewId="@id/non_nav"
+        app:liftOnScroll="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/materialToolbar"
+            app:layout_scrollFlags="scroll|enterAlwaysCollapsed|enterAlways"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="68dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/profilebg"
+            app:menu="@menu/top_app_menu"
+            app:navigationIcon="@drawable/navbar"
+            app:title="Search Here"
+            app:titleCentered="true"
+            app:titleTextAppearance="@style/ToolbarTitleTextAppearance"
+            app:titleTextColor="@color/text_light" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Existing Views -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/logoHealthAssist"
         android:layout_width="wrap_content"
@@ -46,117 +71,90 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/search_bar"
-        android:layout_width="match_parent"
-        android:layout_height="36dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginTop="79dp"
-        android:background="@drawable/profilebg"
-        app:layout_constraintEnd_toEndOf="parent"
+
+    <!-- Scrollable Area -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintEnd_toEndOf="parent">
 
-        <ImageView
-            android:id="@+id/navbar"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:layout_marginStart="20dp"
-            android:src="@drawable/navbar"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-
-            >
-
-        </ImageView>
-
-
-        <TextView
-            android:id="@+id/search_text"
-            android:layout_width="wrap_content"
+        <!-- Container Layout inside ScrollView -->
+        <LinearLayout
+            android:id="@+id/non_nav"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
-            android:text="Search Here"
-            android:textColor="@color/text_light"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.529" />
-        <ImageView
-            android:id="@+id/search_icon"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:src="@drawable/search_icon"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginEnd="20dp"
-            />
+            android:orientation="vertical"
+            android:padding="16dp">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/container1"
-        android:layout_width="136dp"
-        android:layout_height="214dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="45dp"
-        android:background="@drawable/container"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search_bar">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="136dp"
-            android:id="@+id/image1"
-            android:background="@drawable/consult_photo"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            >
-            <ImageView
+            <!-- Horizontal LinearLayout for side-by-side containers -->
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/doctor"/>
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="24dp">
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/container1"
+                    android:layout_width="0dp"
+                    android:layout_height="214dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/container">
 
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/image1"
+                        android:layout_width="match_parent"
+                        android:layout_height="136dp"
+                        android:background="@drawable/consult_photo">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/doctor" />
 
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/container2"
-        android:layout_width="136dp"
-        android:layout_height="214dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="44dp"
-        android:background="@drawable/container"
-        app:layout_constraintStart_toEndOf="@+id/container1"
-        app:layout_constraintTop_toBottomOf="@+id/search_bar">
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/image2"
-            android:layout_width="match_parent"
-            android:layout_height="136dp"
-            android:background="@drawable/chat_with_doctor"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/container2"
+                    android:layout_width="0dp"
+                    android:layout_height="214dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/container">
 
-            <ImageView
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/image2"
+                        android:layout_width="match_parent"
+                        android:layout_height="136dp"
+                        android:background="@drawable/chat_with_doctor">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/doctor"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/loremIpsumText"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/doctor"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:layout_editor_absoluteX="33dp" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                android:layout_height="wrap_content"
+                android:text="@string/lorem_ipsum_text"
+                android:textSize="16sp"
+                android:textColor="@color/light" />
 
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

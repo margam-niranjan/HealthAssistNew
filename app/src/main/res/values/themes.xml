@@ -6,4 +6,7 @@
     </style>
 
     <style name="Theme.HealthAssistMain" parent="Base.Theme.HealthAssistMain" />
+    <style name="ToolbarTitleTextAppearance" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">15dp</item> <!-- Adjust the size as needed -->
+    </style>
 </resources>
