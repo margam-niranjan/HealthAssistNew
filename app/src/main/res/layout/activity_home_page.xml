@@ -16,7 +16,7 @@
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/materialToolbar"
+            android:id="@+id/menuToolBar"
             app:layout_scrollFlags="scroll|enterAlwaysCollapsed|enterAlways"
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -199,7 +199,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/lorem_ipsum_text"
-                android:textSize="16sp"
+                android:textSize="16dp"
                 android:textColor="@color/light" />
 
         </LinearLayout>
