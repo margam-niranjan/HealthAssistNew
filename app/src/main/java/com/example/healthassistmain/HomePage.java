@@ -21,4 +21,5 @@ public class HomePage extends AppCompatActivity {
             return insets;
         });
     }
+
 }

@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:liftOnScrollTargetViewId="@id/non_nav"
-        app:liftOnScroll="true">
+        app:liftOnScroll="true"
+        tools:ignore="MissingConstraints">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/materialToolbar"
@@ -109,14 +110,38 @@
                         android:id="@+id/image1"
                         android:layout_width="match_parent"
                         android:layout_height="136dp"
-                        android:background="@drawable/consult_photo">
+                        android:background="@drawable/consult_photo"
+                        tools:ignore="MissingConstraints">
 
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:src="@drawable/doctor" />
+                        
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/panelTextHead1"
+                        android:text="Book an Appointment"
+                        android:textSize="14dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="140dp"
+                        android:layout_marginStart="15dp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/panelText1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:text="Confirmed Appointments"
+                        android:textSize="11dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/panelTextHead1" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -132,7 +157,8 @@
                         android:id="@+id/image2"
                         android:layout_width="match_parent"
                         android:layout_height="136dp"
-                        android:background="@drawable/chat_with_doctor">
+                        android:background="@drawable/chat_with_doctor"
+                        tools:ignore="MissingConstraints">
 
                         <ImageView
                             android:layout_width="match_parent"
@@ -141,6 +167,28 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/panelTextHead2"
+                        android:text="Chat with Doctor"
+                        android:textSize="14dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="140dp"
+                        android:layout_marginStart="14dp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/panelText2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:textSize="11dp"
+                        android:text="Know solutions for your problems"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/panelTextHead2" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
