@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/user_profile"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_medical_info"
+            android:icon="@drawable/medical_info"
+            android:title="Your Medical Info" />
+        <item
+            android:id="@+id/nav_bmi"
+            android:icon="@drawable/bmi"
+            android:title="BMI Calculator" />
+        <item
+            android:id="@+id/nav_medicines"
+            android:icon="@drawable/delivery"
+            android:title="Book Medicines" />
+        <item
+            android:id="@+id/nav_consult"
+            android:icon="@drawable/stethescope"
+            android:title="Consult a Doctor" />
+        <item
+            android:id="@+id/nav_check_appointment"
+            android:icon="@drawable/appointment_check"
+            android:title="Check your Appointments" />
+        <item
+            android:id="@+id/nav_book"
+            android:icon="@drawable/appointment_book"
+            android:title="Book your appointments" />
+        <item
+            android:id="@+id/nav_pay"
+            android:icon="@drawable/payment"
+            android:title="Pay your bills" />
+        <item
+            android:id="@+id/nav_exercise"
+            android:icon="@drawable/exercise"
+            android:title="Exercise" />
+        <item
+            android:id="@+id/nav_diet"
+            android:icon="@drawable/diet_plan"
+            android:title="Diet Planning" />
+    </group>
+</menu>

@@ -1,208 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
     tools:context=".HomePage">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:liftOnScrollTargetViewId="@id/non_nav"
-        app:liftOnScroll="true"
-        tools:ignore="MissingConstraints">
-
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/menuToolBar"
-            app:layout_scrollFlags="scroll|enterAlwaysCollapsed|enterAlways"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="68dp"
-            android:layout_marginEnd="25dp"
-            android:background="@drawable/profilebg"
-            app:menu="@menu/top_app_menu"
-            app:navigationIcon="@drawable/navbar"
-            app:title="Search Here"
-            app:titleCentered="true"
-            app:titleTextAppearance="@style/ToolbarTitleTextAppearance"
-            app:titleTextColor="@color/text_light" />
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <!-- Existing Views -->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/logoHealthAssist"
+    <include layout="@layout/app_bar_main"/>
+    <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/profilebg"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/logo_black"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/logoProfile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="35dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/profilebg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/profile"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/psded"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        android:id="@+id/navigation_view"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/nav_menu"
+        />
 
 
-    <!-- Scrollable Area -->
-    <ScrollView
-        android:id="@+id/scrollView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- Container Layout inside ScrollView -->
-        <LinearLayout
-            android:id="@+id/non_nav"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
 
-            <!-- Horizontal LinearLayout for side-by-side containers -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="24dp">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/container1"
-                    android:layout_width="0dp"
-                    android:layout_height="214dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/container">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/image1"
-                        android:layout_width="match_parent"
-                        android:layout_height="136dp"
-                        android:background="@drawable/consult_photo"
-                        tools:ignore="MissingConstraints">
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/doctor" />
-                        
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/panelTextHead1"
-                        android:text="Book an Appointment"
-                        android:textSize="14dp"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        android:layout_marginTop="140dp"
-                        android:layout_marginStart="15dp"
-                        android:textStyle="bold"/>
-
-                    <TextView
-                        android:id="@+id/panelText1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="14dp"
-                        android:text="Confirmed Appointments"
-                        android:textSize="11dp"
-                        android:layout_marginTop="8dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/panelTextHead1" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/container2"
-                    android:layout_width="0dp"
-                    android:layout_height="214dp"
-                    android:layout_weight="1"
-                    android:layout_marginStart="16dp"
-                    android:background="@drawable/container">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/image2"
-                        android:layout_width="match_parent"
-                        android:layout_height="136dp"
-                        android:background="@drawable/chat_with_doctor"
-                        tools:ignore="MissingConstraints">
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/doctor"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/panelTextHead2"
-                        android:text="Chat with Doctor"
-                        android:textSize="14dp"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        android:layout_marginTop="140dp"
-                        android:layout_marginStart="14dp"
-                        android:textStyle="bold"/>
-
-                    <TextView
-                        android:id="@+id/panelText2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="14dp"
-                        android:textSize="11dp"
-                        android:text="Know solutions for your problems"
-                        android:layout_marginTop="8dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/panelTextHead2" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/loremIpsumText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/lorem_ipsum_text"
-                android:textSize="16dp"
-                android:textColor="@color/light" />
-
-        </LinearLayout>
-    </ScrollView>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

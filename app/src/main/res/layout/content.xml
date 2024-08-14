@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage">
+
+    <!-- Header Section -->
+
+
+    <!-- Scrollable Area -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Container Layout inside ScrollView -->
+        <LinearLayout
+            android:id="@+id/non_nav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Horizontal LinearLayout for side-by-side containers -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:orientation="horizontal">
+
+                <!-- First Container -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/container1"
+                    android:layout_width="0dp"
+                    android:layout_height="214dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/container">
+
+                    <ImageView
+                        android:id="@+id/image1"
+                        android:layout_width="match_parent"
+                        android:layout_height="136dp"
+                        android:background="@drawable/consult_photo"
+                        android:src="@drawable/doctor"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/panelTextHead1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="Book an Appointment"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toBottomOf="@+id/image1" />
+
+                    <TextView
+                        android:id="@+id/panelText1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Confirmed Appointments"
+                        android:textSize="11dp"
+                        app:layout_constraintTop_toBottomOf="@+id/panelTextHead1" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- Second Container -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/container2"
+                    android:layout_width="0dp"
+                    android:layout_height="214dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/container">
+
+                    <ImageView
+                        android:id="@id/image2"
+                        android:layout_width="match_parent"
+                        android:layout_height="136dp"
+                        android:background="@drawable/chat_with_doctor"
+                        android:src="@drawable/doctor"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/panelTextHead2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:text="Chat with Doctor"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toBottomOf="@+id/image2" />
+
+                    <TextView
+                        android:id="@+id/panelText2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Know solutions for your problems"
+                        android:textSize="11dp"
+                        app:layout_constraintTop_toBottomOf="@+id/panelTextHead2" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/loremIpsumText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lorem_ipsum_text"
+                android:textColor="@color/light"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

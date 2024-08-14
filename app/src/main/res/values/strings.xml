@@ -6,4 +6,7 @@
         <!-- Add more text as needed -->
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula urna at purus tincidunt, a dignissim risus consectetur. Aenean facilisis sapien vel nisi tincidunt, at eleifend mi auctor. Vivamus ac mauris non justo iaculis scelerisque. Donec sit amet dignissim purus. Duis et nulla ac dui sodales accumsan. Curabitur euismod diam vel nulla elementum, id pretium purus malesuada. Nam fermentum, massa in gravida posuere, dui felis efficitur dolor, a ultricies est orci id purus.
     </string>
+    <string name="open_drawer">Open Navigation Drawer</string>
+    <string name="close_drawer">Close Navigation Drawer</string>
+
 </resources>
