@@ -13,6 +13,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
+import androidx.core.view.GravityCompat;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -94,16 +95,20 @@ public class HomePage extends AppCompatActivity {
                     Toast.makeText(HomePage.this, "Diet", Toast.LENGTH_SHORT).show();
                 }
 
-
+                drawerLayout.closeDrawer(GravityCompat.START);
                 return true;
             }
         });
 
 
-
     }
-
-
-
+    public void onBackPressed(){
+        if(drawerLayout.isDrawerOpen(GravityCompat.START)){
+            drawerLayout.closeDrawer(GravityCompat.START);
+        }
+        else {
+            super.onBackPressed();
+        }
+    }
 
 }
