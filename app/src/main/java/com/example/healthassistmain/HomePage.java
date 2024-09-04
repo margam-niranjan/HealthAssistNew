@@ -90,11 +90,9 @@ public class HomePage extends AppCompatActivity {
                 if(id == R.id.nav_exercise){
                     Toast.makeText(HomePage.this, "Exercise", Toast.LENGTH_SHORT).show();
                 }
-
                 if(id == R.id.nav_diet){
                     Toast.makeText(HomePage.this, "Diet", Toast.LENGTH_SHORT).show();
                 }
-
                 drawerLayout.closeDrawer(GravityCompat.START);
                 return true;
             }
@@ -110,5 +108,6 @@ public class HomePage extends AppCompatActivity {
             super.onBackPressed();
         }
     }
+
 
 }
