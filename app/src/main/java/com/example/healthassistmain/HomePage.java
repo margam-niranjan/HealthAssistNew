@@ -1,5 +1,6 @@
 package com.example.healthassistmain;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,6 +20,8 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
 
 public class HomePage extends AppCompatActivity {
@@ -26,6 +29,8 @@ public class HomePage extends AppCompatActivity {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
+    BottomNavigationView bottomNavigation;
+
 
 
     @Override
@@ -44,6 +49,8 @@ public class HomePage extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
 
 
+        bottomNavigation = findViewById(R.id.navigation);
+        bottomNavigation.setSelectedItemId(R.id.action_home);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open_drawer,R.string.close_drawer);
 
         drawerLayout.addDrawerListener(toggle);
@@ -97,8 +104,19 @@ public class HomePage extends AppCompatActivity {
                 return true;
             }
         });
+        bottomNavigation.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int id = item.getItemId();
+                if (id == R.id.action_maps) {
+                    Intent intent = new Intent(HomePage.this, MapsActivity.class);
+                    startActivity(intent);
+                    return true;
+                }
+                return false;
+            }
 
-
+        });
     }
     public void onBackPressed(){
         if(drawerLayout.isDrawerOpen(GravityCompat.START)){
@@ -108,6 +126,4 @@ public class HomePage extends AppCompatActivity {
             super.onBackPressed();
         }
     }
-
-
 }
