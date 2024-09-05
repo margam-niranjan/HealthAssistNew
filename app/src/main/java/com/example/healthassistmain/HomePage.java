@@ -104,19 +104,7 @@ public class HomePage extends AppCompatActivity {
                 return true;
             }
         });
-        bottomNavigation.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                int id = item.getItemId();
-                if (id == R.id.action_maps) {
-                    Intent intent = new Intent(HomePage.this, MapsActivity.class);
-                    startActivity(intent);
-                    return true;
-                }
-                return false;
-            }
 
-        });
     }
     public void onBackPressed(){
         if(drawerLayout.isDrawerOpen(GravityCompat.START)){

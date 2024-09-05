@@ -17,7 +17,8 @@
                 android:layout_height="50dp"
                 android:src="@drawable/logo_black"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/icon_tint"/>
 
 
             <ImageView
@@ -25,7 +26,8 @@
                 android:layout_height="50dp"
                 android:src="@drawable/profile"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/icon_tint"/>
 
             
             

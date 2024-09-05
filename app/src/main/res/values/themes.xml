@@ -3,8 +3,9 @@
     <style name="Base.Theme.HealthAssistMain" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-    </style>
 
+    </style>
+    <color name="icon_tint">#000000</color>
     <style name="Theme.HealthAssistMain" parent="Base.Theme.HealthAssistMain" />
     <style name="ToolbarTitleTextAppearance" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
         <item name="android:textSize">15dp</item> <!-- Adjust the size as needed -->

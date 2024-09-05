@@ -8,5 +8,5 @@
     <color name="light_blue">#338AB7FF</color>
     <color name="light_green">#33338AB7</color>
     <color name="light_blue_nav">#A1EBFF</color>
-
+    <color name="container_color">#FFFFFF</color>
 </resources>
